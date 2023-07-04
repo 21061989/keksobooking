@@ -6,7 +6,7 @@ const checksStringLength = (string, length) => {
   }
 };
 
-console.log (checksStringLength('проверяемая строка', 55));
+checksStringLength('проверяемая строка', 55);
 
 const definesPolydrome = (string) => {
   const stringNormal = string.replaceAll(' ','').toLowerCase();
@@ -16,9 +16,9 @@ const definesPolydrome = (string) => {
   }
 
   if (stringNormal === resultString) {
-    return console.log('верно');
+    return 'верно';
   } else {
-    return console.log('нет');
+    return 'нет';
   }
 };
 
@@ -33,7 +33,7 @@ const extractsNumb = (string) => {
   const numbArr = stringNormal.match(re);
   const numbStr = numbArr ? numbArr.join('') : nNumb;
   const result = Number(numbStr);
-  console.log(result);
+  return result;
 };
 
 extractsNumb('dvwvv333');
