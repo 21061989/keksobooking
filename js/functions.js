@@ -52,9 +52,9 @@ getString('1', 4, '0333');
 const getRandomNumb =  (min, max, numbAfter) => {
   if (min >= 0 && max >= 0) {
   let randomNumb =  Math.random() * (max - min + 1) + min;
-    console.log (Number(randomNumb.toFixed(numbAfter)));
+    Number(randomNumb.toFixed(numbAfter));
   } else {
-     console.log (NaN)
+     NaN
   }
 }
 getRandomNumb(90,50,40);
