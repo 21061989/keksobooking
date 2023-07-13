@@ -39,22 +39,21 @@ const extractsNumb = (string) => {
 extractsNumb('dvwvv333');
 
 const getString = function (string, minLength, addStr) {
-  let addStrLength = minLength - string.length;
-  if (addStrLength <= 0 ) {
-    string
+  const addStrLength = minLength - string.length;
+  if (addStrLength <= 0) {
+    return string;
   }
-
-  let result = addStr.slice(0, addStrLength % addStr.length) + addStr.repeat(addStrLength / addStr.length) + string;
-  return result
-  };
+  const result = addStr.slice(0, addStrLength % addStr.length) + addStr.repeat(addStrLength / addStr.length) + string;
+  return result;
+};
 getString('1', 4, '0333');
 
-const getRandomNumb =  (min, max, numbAfter) => {
-  if (min >= 0 && max >= 0) {
-  let randomNumb =  Math.random() * (max - min + 1) + min;
+const getRandomNumb = (min, max, numbAfter) => {
+  if(min >= 0 && max >= 0) {
+    const randomNumb = Math.random() * (max - min + 1) + min;
     Number(randomNumb.toFixed(numbAfter));
   } else {
-     NaN
+    return NaN;
   }
-}
+};
 getRandomNumb(90,50,40);
